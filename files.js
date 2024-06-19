@@ -1,12 +1,12 @@
 const fs=require('fs')
 
-const message="\nhello,backend!";
-
-fs.writeFile('hello.text',message,(error)=>{
-    if(error){
-        console.error('Error writing to file');
+fs.readFile("hello.text",'utf-8',(err,data)=>{
+    if(err){
+        console.log('error reading file',err);
     }
     else{
-        console.log('File written successfully');
+        data.split("\n").forEach(line=>{
+        console.log(line.split(':')[1]);
+    })
     }
-})
+});
