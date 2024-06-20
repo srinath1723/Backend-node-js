@@ -5,7 +5,7 @@ const express= require('express');
 const app=express();
 //4.cretae a route
 app.get('/',(request,response)=>{
-     response.send('hello world!');
+     response.send('hello world');
 })
 
 //3. run the server

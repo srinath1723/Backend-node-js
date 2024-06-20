@@ -14,8 +14,21 @@ Mongoose
 
 **git checkout -b server1.2**
 **node index.js**
-**node files.js(file name)**
- 
- **npm init -y**
 
- **npm install express** 
+                    package.json:
+                    "scripts":{
+                    "start": "node index.js"
+                        }
+npm start;or npm  run start
+
+npm install express
+
+npm start;or npm  run start
+*npm install nodemon --save-dev*
+                    package.json:
+                    "scripts":{
+                    "start": "node index.js"
+                    "dev":"nodemon index.js"
+                        }
+npm run dev
+
