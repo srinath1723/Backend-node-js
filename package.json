@@ -1,0 +1,15 @@
+{
+  "name": "backend-node-js",
+  "version": "1.0.0",
+  "description": "This is a backend application that provides a RESTful API examples. The application is built using the following technologies:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Srinath",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
