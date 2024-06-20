@@ -1,4 +1,4 @@
-const posts = [
+let posts = [
     {
         "userId": 1,
         "id": 1,
@@ -616,15 +616,35 @@ app.get('/posts', (request, response) => {
 });
 
 app.post('/posts', (request, response) => {
-    console.log(request.body);
-    response.json(
+    
+    posts.push(
         {
             ...request.body,
             id: posts.length + 1
         }
     );
+    response.json(
+        {
+            ...request.body,
+            id: posts.length 
+        }
+    );
+    
 })
+app.put('/posts/:id', (request, response) => {
+    const id = request.params.id;
+    let updatedPost = request.body;
+    const toUpdatePost = posts.find(post => post.id == id);
 
+    updatedPost = {
+        ...toUpdatePost,
+        ...updatedPost
+    }
+
+    posts = posts.map(post => post.id == id ? updatedPost : post);
+
+    response.json(updatedPost);
+})
 // 3. run the server
 app.listen(3002, () => {
     console.log(`Server is running on http://localhost:3002`);
