@@ -1,6 +1,6 @@
 const fs=require('fs')
 
-fs.mkdir('storage-files',(error)=>{
+fs.mkdir('codes',(error)=>{
     if(error){
         console.log('error createing directory');
     }
