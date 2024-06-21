@@ -72,3 +72,6 @@ Enable nodemon for automatic server restarts
  "dev": "nodemon index.js"
 }
 . Run the application in development mode by running npm run dev
+
+-------------------------------------------------------------------------
+npm install mongoose;
