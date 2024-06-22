@@ -75,3 +75,4 @@ Enable nodemon for automatic server restarts
 
 -------------------------------------------------------------------------
 npm install mongoose;
+npm install dotenv;

@@ -1,14 +1,6 @@
+const mongoose=require('mongoose');
 
-
-// 1. import express module
-const express =require('express');
-
-const mongoose=require('mongoose')
-// 2. create express app
-const app = express();
-
-// 5. middleware
-app.use(express.json());
+const app=require("./app");
 console.log('connecting to MangoDB...');
 /*// 4. create a route
 app.get('/posts', (request, response) => {
@@ -58,7 +50,7 @@ app.delete('/posts/:id', (request, response) => {
      message: 'Post deleted successfully'
     });
     })*/
-mongoose.connect('mongodb+srv://srinath:Srisp144@cluster0.vbjuor7.mongodb.net/')
+mongoose.connect('mongodb+srv://srinathsp890:Srinathsp144@cluster0.ylhxbu9.mongodb.net/')
 .then(()=>{
     console.log('connected to mangodb');
 
@@ -67,6 +59,6 @@ mongoose.connect('mongodb+srv://srinath:Srisp144@cluster0.vbjuor7.mongodb.net/')
 });
 }).catch((error)=>{
     console.log('Error connecting to mangoDB',error);
-})    
+});    
 
 
