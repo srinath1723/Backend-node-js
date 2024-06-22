@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 
 const app=require("./app");
+
 console.log('connecting to MangoDB...');
 /*// 4. create a route
 app.get('/posts', (request, response) => {
@@ -50,7 +51,7 @@ app.delete('/posts/:id', (request, response) => {
      message: 'Post deleted successfully'
     });
     })*/
-mongoose.connect('mongodb+srv://srinathsp890:Srinathsp144@cluster0.ylhxbu9.mongodb.net/')
+mongoose.connect(process.env.MONGODB_URL)
 .then(()=>{
     console.log('connected to mangodb');
 
@@ -60,5 +61,6 @@ mongoose.connect('mongodb+srv://srinathsp890:Srinathsp144@cluster0.ylhxbu9.mongo
 }).catch((error)=>{
     console.log('Error connecting to mangoDB',error);
 });    
+
 
 
