@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 const app=require("./app");
-
+const {MONGODB_URL}=require("./utils/config");
 console.log('connecting to MangoDB...');
 /*// 4. create a route
 app.get('/posts', (request, response) => {
@@ -51,7 +51,7 @@ app.delete('/posts/:id', (request, response) => {
      message: 'Post deleted successfully'
     });
     })*/
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(MONGODB_URL)
 .then(()=>{
     console.log('connected to mangodb');
 
