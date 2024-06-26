@@ -124,3 +124,7 @@ Job Portal System
 - [ ] GET /api/v1/applications/:id : Get an application
 - [ ] POST /api/v1/applications : Add an application
 - [ ] GET /api/users/logout : Logout a user
+
+
+
+npm install bcrypt;
