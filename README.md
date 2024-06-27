@@ -130,3 +130,7 @@ Job Portal System
 npm install bcrypt;
 
 npm install jsonwebtoken;
+
+
+**to add middleware**
+npm install cookie-parser
